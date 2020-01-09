@@ -1,0 +1,89 @@
+.form-wrapper-outer {
+    padding: 40px;
+    border-radius: 8px;
+    margin: auto;
+    width: 460px;
+    border: 1px solid #DADCE0;
+    margin-top: 7%;
+}
+
+.form-wrapper-outer .form-logo {
+    margin: 0px auto 15px;
+    width: 200px;
+}
+
+.form-wrapper-outer .form-logo img{
+    width: 100%;
+}
+
+.form-greeting {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.form-button {
+    text-align: right;
+}
+
+.field-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.field-wrapper input {
+    border: 1px solid #1BB600;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+:focus {
+    outline: 0;
+}
+
+.field-wrapper input:focus {
+    border: 1px solid #1BB600;
+}
+
+.field-wrapper .field-placeholder {
+    font-size: 16px;
+    position: absolute;
+    bottom: 17px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #80868B;
+    left: 8px;
+    padding: 0 8px;
+    -webkit-transition: transform 150ms cubic-bezier(0.4,0,0.2,1), opacity 150ms cubic-bezier(0.4,0,0.2,1);
+    transition: transform 150ms cubic-bezier(0.4,0,0.2,1), opacity 150ms cubic-bezier(0.4,0,0.2,1);
+    z-index: 1;
+    text-align: left;
+    width: 100%;
+}
+
+.field-wrapper .field-placeholder span{
+    background: #FFFFFF;
+    padding: 0 9px;
+}
+
+.field-wrapper input:not([disabled]):focus~.field-placeholder {
+    color: #1BB600;
+}
+
+.field-wrapper input:not([disabled]):focus~.field-placeholder,
+.field-wrapper.hasValue input:not([disabled])~.field-placeholder {
+    -webkit-transform: scale(.75) translateY(-39px) translateX(-60px);
+    transform: scale(.75) translateY(-39px) translateX(-60px);
+}
+
+.form-register {
+    font-size: 15px;
+    float: left;
+    margin-top: 9px;
+    color: #1BB600
+}
+
+.form-register:hover {
+    color: rgb(33, 153, 3);
+}

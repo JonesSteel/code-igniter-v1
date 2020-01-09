@@ -1,0 +1,36 @@
+version: '3'
+services:
+  nginx:
+    build: nginx
+    ports:
+      - "8888:80"
+    volumes:
+      - ./application:/var/www/html
+    networks:
+      - igniter
+  php:
+    build: php
+    volumes:
+      - ./application:/var/www/html
+    networks:
+      - igniter
+  mysql:
+    image: mysql:5.7
+    environment:
+      TZ: "America/Mexico_City"
+      MYSQL_ROOT_PASSWORD: C0n5ult4reg15tr0
+      MYSQL_DATABASE: control_cajas
+      MYSQL_USER: consulta
+      MYSQL_PASSWORD: C0n5ult4reg15tr0
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysqldata:/var/lib/mysql
+    networks:
+      - igniter
+networks:
+  igniter:
+    driver: "bridge"
+volumes:
+  mysqldata:
+    driver: "local"

@@ -1,0 +1,5 @@
+docker run --rm -i -t \
+-v $(pwd):/opt \
+-w /opt \
+--network code-igniter_igniter code-igniter_php \
+composer create-project kenjis/codeigniter-composer-installer application
